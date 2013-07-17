@@ -18,5 +18,7 @@ function skrollr_ui_init() {
  * Implements hook_page_build().
  */
 function skrollr_ui_page_build(&$page) {
-  $page['page_bottom']['skrollr_ui']['#markup'] = '<div id="skrollr-ui-indicator" class="skrollr-ui-indicator"></div>';
+  $page['page_bottom']['skrollr_ui_scroll']['#markup'] = '<div id="skrollr-ui-scroll-indicator" class="skrollr-ui-scroll-indicator"></div>';
+  $page['page_bottom']['skrollr_ui_height']['#markup'] = '<div id="skrollr-ui-height-indicator" class="skrollr-ui-height-indicator"></div>';
+  $page['page_bottom']['skrollr_ui_width']['#markup'] = '<div id="skrollr-ui-width-indicator" class="skrollr-ui-width-indicator"></div>';
 }
