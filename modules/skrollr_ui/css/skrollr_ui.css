@@ -27,3 +27,26 @@
   bottom: 0;
   right: 0;
 }
+
+.skrollr-ui-admin-menu-toggle {
+  background: url('../images/admin-menu-toggle.png') no-repeat 0 0 transparent;
+  position: fixed;
+  height: 22px;
+  width: 100px;
+  top: 60px;
+  right: -77px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.skrollr-ui-admin-menu-toggle.hover {
+  right: 0;
+}
+
+html body.skrollr-ui-admin-menu-hidden {
+  margin-top: 0px !important;
+}
+
+body.skrollr-ui-admin-menu-hidden .skrollr-ui-admin-menu-toggle {
+  background-position: 0 -22px;
+}

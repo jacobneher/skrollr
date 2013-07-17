@@ -15,10 +15,25 @@
 		// ...then get the value as the page is actively scrolled
 		$('#skrollr-ui-scroll-indicator').html($window.scrollTop() + 'px');
 	  });
+	  
+	  // Functionality for admin_menu toggling
+	  $('#skrollr-ui-admin-menu-toggle').hover(function() {
+		$(this).addClass('hover');
+	  },
+	  function() {
+		$(this).removeClass('hover');
+	  });
+	  
+	  $('#skrollr-ui-admin-menu-toggle').click(function() {
+		toggle = $(this);
+		$('body').toggleClass('skrollr-ui-admin-menu-hidden');
+		$('#admin-menu').toggle(0);
+	  });
 	}
 	else {
 	  // Add the 'element-invisible' class to hide the box
 	  $('#skrollr-ui-scroll-indicator').addClass('element-invisible');
+	  $('#skrollr-ui-admin-menu-toggle').addClass('element-invisible');
 	}
 	$window.resize(function() {
 	  // ... then get the value when the window is resized

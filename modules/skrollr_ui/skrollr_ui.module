@@ -21,4 +21,5 @@ function skrollr_ui_page_build(&$page) {
   $page['page_bottom']['skrollr_ui_scroll']['#markup'] = '<div id="skrollr-ui-scroll-indicator" class="skrollr-ui-scroll-indicator"></div>';
   $page['page_bottom']['skrollr_ui_height']['#markup'] = '<div id="skrollr-ui-height-indicator" class="skrollr-ui-height-indicator"></div>';
   $page['page_bottom']['skrollr_ui_width']['#markup'] = '<div id="skrollr-ui-width-indicator" class="skrollr-ui-width-indicator"></div>';
+  $page['page_bottom']['skrollr_ui_admin_menu_toggle']['#markup'] = '<div id="skrollr-ui-admin-menu-toggle" class="skrollr-ui-admin-menu-toggle"></div>';
 }
