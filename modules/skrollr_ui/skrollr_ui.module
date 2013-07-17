@@ -1,0 +1,22 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function skrollr_ui_init() {
+  // Get the global theme variable so that we don't load the js files on the admin theme...no need.
+  global $theme;
+  
+  $current_theme = variable_get('theme_default', '');
+  if ($theme === $current_theme) {
+    drupal_add_js(drupal_get_path('module', 'skrollr_ui') . '/js/skrollr_ui.js');
+    drupal_add_css(drupal_get_path('module', 'skrollr_ui') . '/css/skrollr_ui.css');
+  }
+}
+
+/**
+ * Implements hook_page_build().
+ */
+function skrollr_ui_page_build(&$page) {
+  $page['page_bottom']['skrollr_ui']['#markup'] = '<div id="skrollr-ui-indicator" class="skrollr-ui-indicator"></div>';
+}

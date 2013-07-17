@@ -1,0 +1,4 @@
+name = "Skrollr UI"
+description = "Provides development tools to work with the Skrollr javascript library."
+package = Development
+core = 7.x

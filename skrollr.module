@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * Implements hook_init().
+ */
+function skrollr_init() {
+  // Get the global theme variable so that we don't load the js files on the admin theme...no need.
+  global $theme;
+  
+  $current_theme = variable_get('theme_default', '');
+  if ($theme === $current_theme) {
+    drupal_add_js(drupal_get_path('module', 'skrollr') . '/js/skrollr.min.js');
+    drupal_add_js("var s = skrollr.init();", array('type' => 'inline', 'scope' => 'footer'));
+  }
+}
